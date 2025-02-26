@@ -1,5 +1,5 @@
 {{	config(	materialized = 'table',
-		alias = 'srini_schema_change_test'
+		alias = 'srini_schema_change_t'
 	)
 }}
 
