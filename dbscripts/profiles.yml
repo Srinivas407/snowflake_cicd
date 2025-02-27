@@ -1,0 +1,13 @@
+prj1:
+  target: dev
+  outputs:
+    dev:
+      account: wvuvbew-wi67189
+      database: SRINI_P1
+      password: Srinu@407
+      role: ACCOUNTADMIN
+      schema: SRINI_P2
+      threads: 1
+      type: snowflake
+      user: srinivasde
+      warehouse: COMPUTE_WH
