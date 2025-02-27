@@ -34,9 +34,7 @@ jobs:
           SF_DATABASE: ${{ secrets.SF_DATABASE }}
           SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
         run: |
-          cd /home
-          mkdir runner
-          cd runner
+          cd /home/runner
           mkdir .dbt
           touch profiles.yml
           cat <<EOF > /home/runner/.dbt/profiles.yml
