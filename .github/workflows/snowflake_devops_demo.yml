@@ -34,13 +34,6 @@ jobs:
           SF_DATABASE: ${{ secrets.SF_DATABASE }}
           SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
         run: |
-          echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
-          python --version
-          echo "Step 1: Installing schemachange"
-          pip install schemachange
-          pip install dbt-core
-          pip install dbt-snowflake
-
           cat <<EOF > /home/runner/.dbt/profiles.yml
           prj1:
           target: dev
@@ -56,6 +49,15 @@ jobs:
                 user: srinivasde
                 warehouse: COMPUTE_WH
           EOF
+
+          
+          echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
+          python --version
+          echo "Step 1: Installing schemachange"
+          pip install schemachange
+          pip install dbt-core
+          pip install dbt-snowflake
+
 
           echo "Step 2: Running schemachange"
           dbt compile --profile-dir /home/runner/.dbt --target dev
