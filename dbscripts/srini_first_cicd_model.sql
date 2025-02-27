@@ -1,5 +1,5 @@
 {{	config(	materialized = 'table',
-		alias = 'srini_schema_change_t4'
+		alias = 'srini_schema_change_t5'
 	)
 }}
 use SRINI_P2;
