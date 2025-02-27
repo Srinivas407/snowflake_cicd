@@ -55,7 +55,7 @@ jobs:
                 type: snowflake
                 user: srinivasde
                 warehouse: COMPUTE_WH
-          
+          EOF
 
           echo "Step 2: Running schemachange"
           dbt compile
